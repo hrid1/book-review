@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <div>
-      <div className="hero bg-base-200 ">
+      <div className="hero bg-base-200 container mx-auto rounded-md ">
         <div className="hero-content md:flex-row-reverse  gap-12">
           <div className="md:w-64 my-4 ">
             <img

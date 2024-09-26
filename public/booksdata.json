@@ -1,0 +1,122 @@
+{
+    "books": [
+      {
+        "bookId": 1,
+        "bookName": "Atomic Habits",
+        "author": "James Clear",
+        "image": "https://fourminutebooks.com/wp-content/uploads/2020/11/self-help-books-2.jpg.webp",
+        "review": "An insightful guide to building good habits and breaking bad ones, filled with actionable strategies.",
+        "totalPages": 320,
+        "rating": 4.8,
+        "category": "Self-help",
+        "tags": ["Productivity", "Behavioral Science"],
+        "publisher": "Penguin Random House",
+        "yearOfPublishing": 2018
+      },
+      {
+        "bookId": 2,
+        "bookName": "The Alchemist",
+        "author": "Paulo Coelho",
+        "image": "https://fourminutebooks.com/wp-content/uploads/2020/11/self-help-books-3.jpg.webp",
+        "review": "A magical story about following one’s dreams and listening to the heart’s desires.",
+        "totalPages": 208,
+        "rating": 4.6,
+        "category": "Fiction",
+        "tags": ["Adventure", "Philosophy"],
+        "publisher": "HarperOne",
+        "yearOfPublishing": 1988
+      },
+      {
+        "bookId": 3,
+        "bookName": "Educated",
+        "author": "Tara Westover",
+        "image": "https://fourminutebooks.com/wp-content/uploads/2020/11/self-help-books-4.jpg.webp",
+        "review": "A powerful memoir of growing up in a strict and abusive household and finding freedom through education.",
+        "totalPages": 334,
+        "rating": 4.7,
+        "category": "Memoir",
+        "tags": ["Inspiration", "Survival"],
+        "publisher": "Random House",
+        "yearOfPublishing": 2018
+      },
+      {
+        "bookId": 4,
+        "bookName": "1984",
+        "author": "George Orwell",
+        "image": "https://fourminutebooks.com/wp-content/uploads/2020/11/self-help-books-5.jpg.webp",
+        "review": "A dystopian novel that explores the dangers of totalitarianism and extreme political ideology.",
+        "totalPages": 328,
+        "rating": 4.9,
+        "category": "Dystopian",
+        "tags": ["Politics", "Science Fiction"],
+        "publisher": "Secker & Warburg",
+        "yearOfPublishing": 1949
+      },
+      {
+        "bookId": 5,
+        "bookName": "The Subtle Art of Not Giving a F*ck",
+        "author": "Mark Manson",
+        "image": "https://fourminutebooks.com/wp-content/uploads/2020/11/self-help-books-6.jpg.webp",
+        "review": "A counterintuitive approach to living a good life by focusing on what really matters.",
+        "totalPages": 224,
+        "rating": 4.5,
+        "category": "Self-help",
+        "tags": ["Life Lessons", "Personal Growth"],
+        "publisher": "Harper",
+        "yearOfPublishing": 2016
+      },
+      {
+        "bookId": 6,
+        "bookName": "Becoming",
+        "author": "Michelle Obama",
+        "image": "https://fourminutebooks.com/wp-content/uploads/2020/11/self-help-books-7.jpg.webp",
+        "review": "A deeply personal memoir by the former First Lady of the United States, reflecting on her life and experiences.",
+        "totalPages": 448,
+        "rating": 4.8,
+        "category": "Biography",
+        "tags": ["Leadership", "Inspiration"],
+        "publisher": "Crown Publishing Group",
+        "yearOfPublishing": 2018
+      },
+      {
+        "bookId": 7,
+        "bookName": "Sapiens: A Brief History of Humankind",
+        "author": "Yuval Noah Harari",
+        "image": "https://fourminutebooks.com/wp-content/uploads/2020/11/self-help-books-8.jpg.webp",
+        "review": "An exploration of the history of humanity, from the Stone Age to modern technological advances.",
+        "totalPages": 443,
+        "rating": 4.7,
+        "category": "History",
+        "tags": ["Evolution", "Anthropology"],
+        "publisher": "Harper",
+        "yearOfPublishing": 2015
+      },
+      {
+        "bookId": 8,
+        "bookName": "The Power of Habit",
+        "author": "Charles Duhigg",
+        "image": "https://fourminutebooks.com/wp-content/uploads/2020/11/self-help-books-15.jpg.webp",
+        "review": "A groundbreaking exploration of how habits work and how they can be transformed for success.",
+        "totalPages": 371,
+        "rating": 4.6,
+        "category": "Self-help",
+        "tags": ["Behavioral Science", "Psychology"],
+        "publisher": "Random House",
+        "yearOfPublishing": 2012
+      },
+      {
+        "bookId": 9,
+        "bookName": "Man’s Search for Meaning",
+        "author": "Viktor E. Frankl",
+        "image": "https://fourminutebooks.com/wp-content/uploads/2020/11/self-help-books-18.jpg.webp",
+        "review": "A profound examination of finding purpose in life, based on the author’s experiences in Nazi concentration camps.",
+        "totalPages": 200,
+        "rating": 4.8,
+        "category": "Philosophy",
+        "tags": ["Psychology", "Inspiration"],
+        "publisher": "Beacon Press",
+        "yearOfPublishing": 1946
+      }
+    ]
+  }
+  
