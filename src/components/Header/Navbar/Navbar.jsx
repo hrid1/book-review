@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import logo from "../../../assets/images/book.png";
 
 const Navbar = () => {
   const navLinks = (
@@ -15,8 +16,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="md:mx-6">
-      <div className="navbar bg-base-100">
+    <div className="md:mx-6 sticky top-0">
+      <div className="navbar border-b">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -42,7 +43,10 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Book Vibe</a>
+          <a className="btn btn-ghost text-xl font-bold ">
+            <img className="w-6 h-6 mt-1" src={logo} alt="" />
+            Book Vibe
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
