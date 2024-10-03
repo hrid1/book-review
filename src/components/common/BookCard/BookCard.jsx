@@ -1,5 +1,6 @@
 import { FaRegStar } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+
 
 const BookCard = ({ book }) => {
   const {

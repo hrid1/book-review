@@ -1,10 +1,10 @@
 import Hero from "./Hero/Hero";
-import Navbar from "./Navbar/Navbar";
+// import Navbar from "./Navbar/Navbar";
 
 const Header = () => {
   return (
     <div>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
       <Hero></Hero>
     </div>
   );

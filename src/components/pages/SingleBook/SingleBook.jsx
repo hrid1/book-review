@@ -1,37 +1,69 @@
-import React from "react";
+import { useLoaderData, useParams } from "react-router-dom";
 
 const SingleBook = () => {
+  const data = useLoaderData();
+  const { id } = useParams();
+  const books = data.books;
+  const book = books.find((book) => book.bookId === parseInt(id));
+  console.log(book);
+
+  const {
+    bookId,
+    bookName,
+    author,
+    image,
+    review,
+    totalPages,
+    rating,
+    category,
+    tags,
+    publisher,
+    yearOfPublishing,
+  } = book;
+
   return (
     <div>
-      <div className="card flex flex-col md:flex-row bg-green-400 shadow-xl md:w-10/12 mx-auto p-4">
-        <figure className="md:w-1/2 p-6 rounded-md bg-base-200 ">
+      <div className="card flex flex-col md:flex-row  shadow-xl md:w-10/12 mx-auto p-4">
+        <figure className="md:w-1/2 p-6 rounded-md bg-lime-50">
           <img
-            src="https://fourminutebooks.com/wp-content/uploads/2020/11/self-help-books-7.jpg.webp"
+            src={image}
             alt="Album"
-            className=""
+            className="shadow-md"
           />
         </figure>
-        <div className="bg-red-100 md:w-1/2 p-6">
+        <div className=" md:w-1/2 p-6">
           <div>
-            <h2 className="card-title">The Subtle art of Not Giving Fuska</h2>
-            <p>By: Aw Howldad</p>
-            <p className="border-y py-2">Fiction</p>
-            <p>Review: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit sequi impedit quisquam modi voluptatem iusto vitae libero eum voluptatum sunt? Qui assumenda quos asperiores quas, cumque maxime tempora laborum temporibus ipsam unde sunt dicta nesciunt recusandae, dolorum veniam eius repellendus mollitia dolores praesentium doloribus! Aliquid molestias beatae cumque molestiae error.</p>
+            <h2 className="card-title text-4xl">{bookName}</h2>
+            <p className=" font-semibold text-gray-500">By: {author}</p>
+            <p className="border-y py-2">{category}</p>
+            <p>Review: {review}</p>
 
-            <div className="py-3 border-b">
-                <span>Tag:</span>
+            <div className="py-3 border-b flex gap-4 items-center">
+              <span>Tag:</span>
+              <div className="badge badge-primary badge-outline">#{tags[0]}</div>
+              <div className="badge badge-primary badge-outline">#{tags[1]}</div>
             </div>
 
-            <div className="space-y-2.5 mb-8 w-2/3">
-                <p className="flex justify-between  text-gray-500">Number of Pages: <span className="font-semibold text-black">234</span> </p>
-                <p className="flex justify-between  text-gray-500">Publisher: <span className="font-semibold text-black">234</span> </p>
-                <p className="flex justify-between  text-gray-500">Year of Publishing: <span className="font-semibold text-black">234</span> </p>
-                <p className="flex justify-between  text-gray-500">Rating: <span className="font-semibold text-black">234</span> </p>
+            <div className="space-y-2.5 mt-2.5 mb-8 md:w-2/3 ">
+              <p className="flex justify-between  text-gray-500">
+                Number of Pages:
+                <span className="font-semibold text-black">{totalPages}</span>{" "}
+              </p>
+              <p className="flex justify-between  text-gray-500">
+                Publisher: <span className="font-semibold text-black">{publisher}</span>{" "}
+              </p>
+              <p className="flex justify-between  text-gray-500">
+                Year of Publishing:{yearOfPublishing}
+                <span className="font-semibold text-black">234</span>{" "}
+              </p>
+              <p className="flex justify-between  text-gray-500">
+                Rating: <span className="font-semibold text-black">{rating}</span>{" "}
+              </p>
             </div>
           </div>
           <div className="card-actions ">
-            <button className="btn btn-primary">Listen</button>
-            <button className="btn btn-primary">Listen</button>
+            <button className="btn btn-outline">Read</button>
+            <button className="btn btn-secondary ">Whitelist</button>
           </div>
         </div>
       </div>

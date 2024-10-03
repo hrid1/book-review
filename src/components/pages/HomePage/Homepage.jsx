@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import BookCard from "../../common/BookCard/BookCard";
-import SingleBook from "../SingleBook/SingleBook";
+
 
 const Homepage = () => {
   // load data
@@ -12,7 +12,7 @@ const Homepage = () => {
       .then((data) => setBooks(data.books));
   }, []);
 
-//   console.log(books.length)
+  //   console.log(books.length)
   return (
     <div className=" container mx-auto mt-8">
       {/* title */}
@@ -26,13 +26,9 @@ const Homepage = () => {
       <section className="grid grid-cols-1 md:grid-cols-3 border gap-6 py-5 px-10 my-8 ">
         {/* <BookCard></BookCard> */}
 
-        {
-            // books.map(book => <BookCard key={book.bookId} book={book}></BookCard>)
-        }
-      </section>
-
-      <section>
-        <SingleBook></SingleBook>
+        {books.map((book) => (
+          <BookCard key={book.bookId} book={book}></BookCard>
+        ))}
       </section>
     </div>
   );
