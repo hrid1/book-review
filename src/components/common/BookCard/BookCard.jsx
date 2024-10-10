@@ -1,8 +1,9 @@
 import { FaRegStar } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
+import defaultImg from '../../../assets/images/404.jpg'
 
 
-const BookCard = ({ book }) => {
+const BookCard = ({ book, allBooks }) => {
   const {
     bookId,
     bookName,
@@ -17,11 +18,11 @@ const BookCard = ({ book }) => {
     yearOfPublishing,
   } = book;
 
-  console.log(bookName);
+  // console.log(bookName);
   return (
     <Link to={`book/${bookId}`} className="card bg-base-200 h-[540px] shadow-xl p-5 ">
       <figure className="py-6 bg-gray-100  rounded-xl">
-        <img src={image} alt="Shoes" className="w-44" />
+        <img src={ image || defaultImg} alt="Shoes" className="w-44" />
       </figure>
       <div className="card-body p-0 mt-4 space-y-1">
         <div className="space-x-4 text-green-500 ">
