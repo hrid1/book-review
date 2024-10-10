@@ -73,7 +73,7 @@ const SingleBook = () => {
         </div>
       </div>
 
-      {/* <h1>This si single book {id}</h1> */}
+      {/* <h1>This is single book {id}</h1> */}
     </div>
   );
 };

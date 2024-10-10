@@ -1,9 +1,14 @@
 import React from 'react';
+import SingleBook from './pages/SingleBook/SingleBook';
+import BookListCard from './common/BookListCard/BookListCard';
 
 const ReadingBook = () => {
     return (
         <div>
-            <h1>This si reading books</h1>
+
+            <BookListCard></BookListCard>
+
+
         </div>
     );
 };

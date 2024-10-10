@@ -11,13 +11,13 @@ const Navbar = () => {
         <NavLink to="/listedbook">Listed Books</NavLink>
       </li>
       <li>
-        <NavLink to="/pages">Pages to Read</NavLink>
+        <NavLink to="/pagetoread">Pages to Read</NavLink>
       </li>
     </>
   );
 
   return (
-    <div className="md:mx-6 sticky top-0 border-b py-2">
+    <div className="md:mx-6  top-0 border-b py-2 sticky z-10 backdrop-blur-md ">
       <div className="navbar">
         <div className="navbar-start  absolut">
           {/* Dropdown for mobile */}
@@ -55,7 +55,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
-        
+
         <div className="navbar-end gap-3.5">
           <a className="btn">Sign In</a>
           <a className="btn">Sign Up</a>

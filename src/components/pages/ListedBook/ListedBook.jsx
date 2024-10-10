@@ -1,27 +1,34 @@
-import BookListCard from "../../common/BookCard/BookListCard";
+import { useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 
 const ListedBook = () => {
-    return (
-        <div className=" container mx-auto">
+  const [tab, setTab] = useState(0);
 
-
-             {/* tab section */}
+  return (
+    <div className="container mx-auto mt-6">
+      {/* tab section */}
       <div role="tablist" className="tabs tabs-lifted">
-        <a role="tab" className="tab tab-active">
+        <Link
+          onClick={() => setTab(0)}
+          to={""}
+          role="tab"
+          className={`tab ${tab === 0 ? "tab-active" : ""}`}
+        >
           Read Books
-        </a>
-        <a role="tab" className="tab">
-          Whitelist Books
-        </a>
+        </Link>
+        <Link
+          onClick={() => setTab(1)}
+          to={"wishlist"}
+          role="tab"
+          className={`tab ${tab === 1 && "tab-active"}`}
+        >
+          Wishlist Books
+        </Link>
       </div>
 
-
-      <BookListCard></BookListCard>
-
-   
-          
-        </div>
-    );
+      <Outlet />
+    </div>
+  );
 };
 
 export default ListedBook;
