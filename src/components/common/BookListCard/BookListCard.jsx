@@ -1,5 +1,7 @@
-const BookListCard = ({ book }) => {
-  console.log(book);
+import { Link } from "react-router-dom";
+
+const BookListCard = ({ book, handleDelete }) => {
+  // console.log(book);
 
   const {
     bookId,
@@ -53,17 +55,30 @@ const BookListCard = ({ book }) => {
 
           <hr />
 
-          <div className=" space-x-4">
-            <button className="p-2.5 font-medium rounded-full bg-blue-100 text-blue-500">
-              Category: <span>{category}</span>
-            </button>
-            <button className="p-2.5 font-medium rounded-full bg-yellow-100 text-yellow-500">
-              Rating: <span>{rating}</span>
-            </button>
+          <div className="flex justify-between items-center">
+            <div className="space-x-4">
+              <button className="p-2.5 font-medium rounded-full bg-blue-100 text-blue-500">
+                Category: <span>{category}</span>
+              </button>
+              <button className="p-2.5 font-medium rounded-full bg-yellow-100 text-yellow-500">
+                Rating: <span>{rating}</span>
+              </button>
 
-            <button className="p-2.5 font-medium rounded-full bg-green-500 text-white">
-              View Details
-            </button>
+              <Link to={`/book/${bookId}`}>
+                <button className="p-2.5 font-medium rounded-full bg-green-500 text-white">
+                  View Details
+                </button>
+              </Link>
+            </div>
+
+            <div>
+              <button
+                onClick={() => handleDelete(bookId)}
+                className="px-4 py-2.5 font-medium rounded-full bg-red-500 text-white mr-6"
+              >
+                Delete
+              </button>
+            </div>
           </div>
         </div>
       </section>

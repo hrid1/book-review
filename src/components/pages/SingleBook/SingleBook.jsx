@@ -1,11 +1,9 @@
-import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { saveToReadList, saveToWishList } from "../../../utilites";
 
 const SingleBook = () => {
   const data = useLoaderData();
   const { id } = useParams();
-
   const books = data.books;
   const book = books.find((book) => book.bookId === parseInt(id));
   // console.log(book, id);
@@ -78,8 +76,11 @@ const SingleBook = () => {
           </div>
           <div className="card-actions ">
             <button
-            onClick={()=> handleReadList(book)}
-             className="btn btn-outline">Read</button>
+              onClick={() => handleReadList(book)}
+              className="btn btn-outline"
+            >
+              Read
+            </button>
             <button
               onClick={() => handleWishList(book)}
               className="btn btn-secondary "

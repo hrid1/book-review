@@ -59,3 +59,16 @@ export const saveToReadList = (book) => {
 // };
 
 // ------------------For Read List----------------
+export const deleteFromReadList = (id) => {
+  let readList = getReadList();
+  const remaining = readList.filter((b) => b.bookId !== id);
+  localStorage.setItem("readList", JSON.stringify(remaining));
+  toast.success("Book is removed from Readlist");
+};
+
+export const deleteFromWishList = (id) => {
+  let wishList = getWishList();
+  const remaining = wishList.filter((b) => b.bookId !== id);
+  localStorage.setItem("wishList", JSON.stringify(remaining));
+  toast.success("Book remove from WishList");
+};

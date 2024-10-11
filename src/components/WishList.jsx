@@ -1,16 +1,26 @@
-import { getWishList } from "../utilites";
+import { useState } from "react";
+import { deleteFromWishList, getWishList } from "../utilites";
 import BookListCard from "./common/BookListCard/BookListCard";
 import NotFound from "./common/NotFound/NotFound";
 
-const books = getWishList();
-// console.log(books);
-
 const WishList = () => {
-  if (books.length === 0) return <NotFound name={'Listed Book'}></NotFound>
+  // const books = getWishList();
+  const [books, setBooks] = useState(getWishList());
+
+  const handleDelete = (id) => {
+    deleteFromWishList(id);
+    setBooks(getWishList());
+  };
+
+  if (books.length === 0) return <NotFound name={"Listed Book"}></NotFound>;
   return (
     <div>
       {books.map((book) => (
-        <BookListCard key={book.bookId} book={book}></BookListCard>
+        <BookListCard
+          key={book.bookId}
+          book={book}
+          handleDelete={handleDelete}
+        ></BookListCard>
       ))}
     </div>
   );
