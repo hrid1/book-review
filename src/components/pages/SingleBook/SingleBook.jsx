@@ -78,11 +78,8 @@ const SingleBook = () => {
           </div>
           <div className="card-actions ">
             <button
-              onClick={() => handleReadList(book)}
-              className="btn btn-outline"
-            >
-              Read
-            </button>
+            onClick={()=> handleReadList(book)}
+             className="btn btn-outline">Read</button>
             <button
               onClick={() => handleWishList(book)}
               className="btn btn-secondary "

@@ -1,12 +1,14 @@
-import React from "react";
-import SingleBook from "./pages/SingleBook/SingleBook";
+
+import { getReadList } from "../utilites";
 import BookListCard from "./common/BookListCard/BookListCard";
-import { getReadList, getWishList } from "../utilites";
+import NotFound from "./common/NotFound/NotFound";
 
 const ReadingBook = () => {
   const books = getReadList();
-// const books= getWishList();
+  // const books= getWishList();
   console.log(books);
+
+  if (books.length < 1) return <NotFound name={"Reading Book"}></NotFound>;
   return (
     <div>
       {/* <BookListCard></BookListCard> */}
