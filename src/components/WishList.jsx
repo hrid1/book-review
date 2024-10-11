@@ -1,12 +1,15 @@
+import { getWishList } from "../utilites";
 import BookListCard from "./common/BookListCard/BookListCard";
+
+const books = getWishList();
+// console.log(books);
 
 const WishList = () => {
   return (
     <div>
-      <h1>This is wish listt</h1>
-      <BookListCard></BookListCard>
-      <BookListCard></BookListCard>
-      <BookListCard></BookListCard>
+      {books.map((book) => (
+        <BookListCard key={book.bookId} book={book}></BookListCard>
+      ))}
     </div>
   );
 };

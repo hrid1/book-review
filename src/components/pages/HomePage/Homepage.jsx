@@ -19,7 +19,7 @@ const Homepage = () => {
 
         {/* all books */}
 
-        <section className="grid grid-cols-1 md:grid-cols-3 border gap-6 py-5 px-10 my-8 ">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border gap-6 py-5 px-10 my-8 ">
           {/* <BookCard></BookCard> */}
 
           {data.books.map((book) => (
