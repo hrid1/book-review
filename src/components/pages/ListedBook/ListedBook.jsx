@@ -1,10 +1,19 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link, Outlet } from "react-router-dom";
 
 const ListedBook = () => {
   const [tab, setTab] = useState(0);
 
   return (
+    <>
+
+    <Helmet>
+      <title>Listed Book | BookReview</title>
+    </Helmet>
+    
+    
+    
     <div className="container mx-auto mt-6">
       {/* tab section */}
       <div role="tablist" className="tabs tabs-lifted">
@@ -28,6 +37,7 @@ const ListedBook = () => {
 
       <Outlet />
     </div>
+    </>
   );
 };
 

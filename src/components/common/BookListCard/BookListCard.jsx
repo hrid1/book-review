@@ -15,7 +15,9 @@ const BookListCard = ({ book, handleDelete }) => {
     tags,
     publisher,
     yearOfPublishing,
-  } = book;
+  } = book || {};
+
+  console.log(book);
 
   return (
     <>

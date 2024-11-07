@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { saveToReadList, saveToWishList } from "../../../utilites";
+import { Helmet } from "react-helmet-async";
 
 const SingleBook = () => {
   const data = useLoaderData();
@@ -32,6 +33,10 @@ const SingleBook = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Single Book | BookReview</title>
+      </Helmet>
+
       <div className="card flex flex-col md:flex-row  shadow-xl md:w-10/12 mx-auto p-4">
         <figure className="md:w-1/2 p-6 rounded-md bg-lime-50">
           <img src={image} alt="Album" className="shadow-md" />

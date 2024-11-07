@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import toast from "react-hot-toast";
+
 
 export const getWishList = () => {
   let wishList = [];

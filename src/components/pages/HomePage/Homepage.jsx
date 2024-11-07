@@ -2,14 +2,12 @@ import { useEffect, useState } from "react";
 import BookCard from "../../common/BookCard/BookCard";
 import { useLoaderData, useNavigation } from "react-router-dom";
 import Loader from "../../common/Loader/Loader";
+import { Helmet } from "react-helmet-async";
 
 const Homepage = () => {
   const [loading, setLoading] = useState(true);
 
-  // //load data -1
-  // const data = useLoaderData();
-
-  // load data - 2
+  console.log(loading);
 
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -21,11 +19,14 @@ const Homepage = () => {
           setLoading(false);
         }, 2000)
       );
-    
   }, []);
 
   return (
     <>
+      <Helmet>
+        <title>Home | BookReview</title>
+      </Helmet>
+
       {loading ? (
         <Loader></Loader>
       ) : (
